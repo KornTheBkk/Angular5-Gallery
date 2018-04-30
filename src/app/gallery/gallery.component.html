@@ -1,8 +1,8 @@
 <h2>Recent photos</h2>
-<app-gallery-category></app-gallery-category>
+<app-gallery-category (SelectCategoryEvent)="onSelectCategory($event)"></app-gallery-category>
 
 <ul class="thumbnails">
-  <li *ngFor="let image of images">
+  <li *ngFor="let image of images | imageFilter:category">
     <a routerLink="/image/{{ image.id }}">
       <img src="{{ image.url }}" />
     </a>

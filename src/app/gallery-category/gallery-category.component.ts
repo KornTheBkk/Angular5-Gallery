@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-category',
@@ -9,6 +9,8 @@ export class GalleryCategoryComponent implements OnInit {
 
   category: string = 'all';
 
+  @Output() public SelectCategoryEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +18,7 @@ export class GalleryCategoryComponent implements OnInit {
 
   filterBy(category: string) {
     this.category = category;
+    this.SelectCategoryEvent.emit(this.category);
   }
 
 }

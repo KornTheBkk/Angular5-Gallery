@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 
 import { ImageService } from './image.service';
 import { GalleryCategoryComponent } from './gallery-category/gallery-category.component';
+import { ImageFilterPipe } from './image-filter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { GalleryCategoryComponent } from './gallery-category/gallery-category.co
     NavbarComponent,
     GalleryComponent,
     ImageDetailComponent,
-    GalleryCategoryComponent
+    GalleryCategoryComponent,
+    ImageFilterPipe
   ],
   imports: [
     BrowserModule,

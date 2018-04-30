@@ -9,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class GalleryComponent implements OnInit {
 
   images: Array<any>;
+  category: string = 'all';
 
   constructor(private imageService: ImageService) { }
 
   ngOnInit() {
     this.images = this.imageService.getImages();
+  }
+
+  onSelectCategory(event) {
+    //console.log(event);
+    this.category = event;
   }
 
 }
