@@ -9,19 +9,23 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 
+import { ImageService } from './image.service';
+import { GalleryCategoryComponent } from './gallery-category/gallery-category.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GalleryComponent,
-    ImageDetailComponent
+    ImageDetailComponent,
+    GalleryCategoryComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

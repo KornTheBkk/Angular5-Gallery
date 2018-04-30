@@ -1,0 +1,14 @@
+.thumbnails {
+
+}
+
+.thumbnails li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.thumbnails li img {
+    width: 100%;
+    max-width: 150px;
+    height: 100px;
+}
