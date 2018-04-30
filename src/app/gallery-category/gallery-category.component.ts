@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-category',
@@ -7,9 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GalleryCategoryComponent implements OnInit {
 
-  category: string = 'all';
 
-  @Output() public SelectCategoryEvent = new EventEmitter();
+  @Output() SelectCategoryEvent = new EventEmitter();
+  @Input() category: string;
 
   constructor() { }
 

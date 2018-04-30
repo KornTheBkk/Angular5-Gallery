@@ -1,6 +1,7 @@
+
 <div class="gallery-category">
-    <button class="btn btn-lg btn-info" [class.active]="category=='all'" (click)="filterBy('all')">All</button>
-    <button class="btn btn-lg btn-info" [class.active]="category=='boats'" (click)="filterBy('boats')">Boats</button>
-    <button class="btn btn-lg btn-info" [class.active]="category=='camping'" (click)="filterBy('camping')">Camping</button>
-    <button class="btn btn-lg btn-info" [class.active]="category=='library'" (click)="filterBy('library')">Library</button>
+    <a routerLink="/gallery/all" [class.active]="category=='all'" class="btn btn-lg btn-info" (click)="filterBy('all')">All</a>
+    <a routerLink="/gallery/boats" [class.active]="category=='boats'" class="btn btn-lg btn-info" (click)="filterBy('boats')">Boats</a>
+    <a routerLink="/gallery/camping" [class.active]="category=='camping'" class="btn btn-lg btn-info" (click)="filterBy('camping')">Camping</a>
+    <a routerLink="/gallery/library" [class.active]="category=='library'" class="btn btn-lg btn-info" (click)="filterBy('library')">Library</a>
 </div>

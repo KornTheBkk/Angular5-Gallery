@@ -1,5 +1,5 @@
 <h2>Recent photos</h2>
-<app-gallery-category (SelectCategoryEvent)="onSelectCategory($event)"></app-gallery-category>
+<app-gallery-category [category]="category" (SelectCategoryEvent)="onSelectCategory($event)"></app-gallery-category>
 
 <ul class="thumbnails">
   <li *ngFor="let image of images | imageFilter:category">
